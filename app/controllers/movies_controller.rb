@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!, only: [:send_info]
 
-  expose_decorated(:movies) { Movie.all }
+  expose_decorated(:movies) { Movie.includes(:genre).paginate(:page => params[:page], :per_page => 20) }
   expose(:movie)
 
   def send_info
