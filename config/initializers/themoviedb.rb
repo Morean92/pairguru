@@ -1,2 +1,1 @@
-Tmdb::Api.key("API_KEY")
-
+Tmdb::Api.key(ENV['API_KEY'])

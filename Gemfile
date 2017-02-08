@@ -13,7 +13,7 @@ gem 'decent_exposure'
 gem 'bootstrap-sass'
 gem 'annotate', '~> 2.6.5'
 gem 'will_paginate'
-gem 'themoviedb'
+gem 'themoviedb-api'
 
 group :development do
   gem 'rails-erd'
