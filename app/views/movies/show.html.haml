@@ -1,10 +1,11 @@
 %h1= movie.title
-.jumbotron
-  .div
-    =image_tag(@poster_image)
-  .div
-    ="Movie Owerview: #{@overview}"
-  .div
-    ="Movie Average Rating: #{@rating}"
+.row
+  .col-lg-2
+    = image_tag(movie.poster_image, class: 'img-responsive poster')
+  .col-lg-10
+    %p.rating
+      Average Note: 
+      = movie.rating
+    %p.description= movie.overview
 - if user_signed_in?
   %p= link_to 'Email me details about this movie', send_info_movie_path(movie), class: 'btn btn-sm btn-default'
